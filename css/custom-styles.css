@@ -1,0 +1,142 @@
+/* Custom styles for USP section */
+.usp-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.usp-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.usp-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usp-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.usp-image-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.usp-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.usp-item:hover .usp-image {
+  transform: scale(1.05);
+}
+
+.usp-content {
+  padding: 30px 25px;
+  position: relative;
+}
+
+.usp-number {
+  position: absolute;
+  top: -15px;
+  right: 25px;
+  background: #0064EB;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.usp-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.usp-description {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Marquee styles */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #0064EB, #40A6DB);
+  padding: 20px 0;
+  margin: 60px 0;
+}
+
+.marquee-text {
+  display: inline-block;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 48px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 2px;
+  animation: marquee 20s linear infinite;
+  padding-right: 100px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .usp-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .usp-title {
+    font-size: 20px;
+  }
+  
+  .marquee-text {
+    font-size: 32px;
+  }
+  
+  .usp-section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .usp-content {
+    padding: 25px 20px;
+  }
+  
+  .marquee-text {
+    font-size: 24px;
+  }
+}
