@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Находим блоки для вывода сообщений
   var formWrapper = clone.closest(".w-form");
-  var formInputs = clone.closest(".inputs");
+  var formInputs = formWrapper?.querySelector(".inputs");
   var successMessage = formWrapper?.querySelector(".w-form-done");
   var errorMessage = formWrapper?.querySelector(".w-form-fail");
 
