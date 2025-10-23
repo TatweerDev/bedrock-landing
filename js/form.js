@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
           console.log("✅ Form successfully submitted to Netlify!");
           if (successMessage) successMessage.style.display = "block";
+          if (formWrapper) formWrapper.style.display = "none";
           if (errorMessage) errorMessage.style.display = "none";
           clone.reset();
         } else {
