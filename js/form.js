@@ -39,6 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // не вызываем e.preventDefault() — позволяем браузеру отправить POST на тот же URL
     // если нужен ajax — сюда можно писать fetch к Netlify Forms endpoint
     // например, можно показать индикатор отправки
-    // console.log('Submitting native form to Netlify...');
+    console.log("Submitting native form to Netlify...");
   });
 });
