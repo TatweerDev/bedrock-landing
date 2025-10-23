@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Находим блоки для вывода сообщений
   var formWrapper = clone.closest(".w-form");
+  var formInputs = clone.closest(".inputs");
   var successMessage = formWrapper?.querySelector(".w-form-done");
   var errorMessage = formWrapper?.querySelector(".w-form-fail");
 
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
           console.log("✅ Form successfully submitted to Netlify!");
           if (successMessage) successMessage.style.display = "block";
-          if (formWrapper) formWrapper.style.display = "none";
+          if (formInputs) formInputs.style.display = "none";
           if (errorMessage) errorMessage.style.display = "none";
           clone.reset();
         } else {
